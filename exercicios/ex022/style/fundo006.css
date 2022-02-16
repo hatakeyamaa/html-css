@@ -2,15 +2,26 @@
 
 body{
     height: 100vh;
+
+    /*
+
     background-color: black;
     background-image: url('../imagens/wallpaper002.jpg');
     background-position: center center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    
+    shorthand background
+        color > image > position > repeat > / [size] > attachment
+    
+    */
+
+    background: black url('../imagens/wallpaper002.jpg') center center / cover no-repeat fixed;
 }
 
 main{
-    width: 400px;
+    max-width: 400px;
     background-color: white;
     padding: 10px;
     margin: auto;
