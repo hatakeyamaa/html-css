@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+}
+
+div#fundo{
+background: black url('imagens/espaco.jpg') center center / cover;
+height: 100vh;
+    
+    /* background-color: black;
+    background-image: url('../imagens/espaco.jpg');
+    background-size: 100% 100%;
+    height: 100vh; */
+}
+
+div#astronauta{
+    background-image: url('imagens/astronauta.png');
+    width: 500px;
+    height: 508px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
