@@ -8,12 +8,12 @@ body{
     background-color: black;
     background-image: url('../imagens/wallpaper002.jpg');
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     
     shorthand background
-        color > image > position > repeat > / [size] > attachment
+        color > image > position > / [size] > repeat > attachment
     
     */
 
