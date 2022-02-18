@@ -56,6 +56,10 @@ section{
     font-size: 3.5vw;
 }
 
+section > p{
+    padding-bottom: 2em;
+}
+
 section#imagem1{
     /* 
     background-image: url('../imagens/background001.jpg');
@@ -82,7 +86,7 @@ section#imagem2{
 
 p.texto{
     color: white;
-    width: 42vw;
+    display: inline-block;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.459);
     text-shadow: 1px 1px 3px black;
