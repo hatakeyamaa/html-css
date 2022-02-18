@@ -6,6 +6,7 @@
 
 *{
     margin: 0px;
+    padding: 0px;
 }
 
 :root{
@@ -23,7 +24,7 @@ header{
 header h1{
     font-family: var(--fontetitulo);
     font-variant: small-caps;
-    font-size: 8vw;
+    font-size: 10vw;
     text-align: center;
     padding-top: 50px;
 }
@@ -46,14 +47,13 @@ header a:hover, footer a:hover{
 }
 
 
-section{
-    font-family: var(--fonte03);
-    font-size: 3.5vw;
+section{    
     padding-top: 10vh;
     padding-bottom: 10vh;
-    font-size: 3.5vw;
     padding-left: 30px;
     line-height: 2em;
+    font-family: var(--fonte03);
+    font-size: 3.5vw;
 }
 
 section#imagem1{
@@ -81,7 +81,6 @@ section#imagem2{
 }
 
 p.texto{
-    font-size: 3.5vw;
     color: white;
     width: 42vw;
     padding: 5px;
