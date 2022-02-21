@@ -15,6 +15,13 @@
             border-collapse: collapse;
         }
 
+        caption{
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         td, th{
             border: 1px solid black;
             text-align: center;
@@ -26,12 +33,22 @@
         }
 
         thead, tfoot{
-            background-color: grey;
+            background-color: rgb(94, 93, 93);
             color: white;
         }
 
-        tr{
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(94, 93, 93);
+        }
 
+        tbody > tr:nth-child(even){ /* 2n */
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(odd){ /* 2n-1 */
+            background-color: white;
         }
     </style>
 </head>
@@ -40,20 +57,44 @@
     <!--
         anatomia para tabelas grandes
 
+        caption - legenda da tabela (fica acima da tabela)
+
         table
             thead
-                tr - td - th
+                tr (coluna) - td (dados) - th (titulo)
             tbody
                 tr - td - th
             tfoot
                 tr - td - th
+
+        scope - não aparece mas facilita mecanismos de pesquisa
+            scope="col" - mesma coluna
+            scope="row" - mesma linha
+
+        efeito zebrado - nth-child(2n) - altera as cores
+        nth-child(3n) - altera a cor a cada 2 vezes
+        nth-child(odd) - celulas impares mudam a cor
+        nth-child(even) - celulas pares mudam cor
+
+        cabeçalho fixo - deixa o cabeçalho fixo com a rolagem da tabela. Usado quando a tabela for muito grande
+            table {
+                position: relative;
+            }
+
+            thead > th > td {
+                position: sticky;
+                top: -1px; (não deixa fresta entre navegador e pagina)
+                background-color: rgb(94, 93, 93);
+            }
+
     -->
 
     <table>
+        <caption>população das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 90px;">População</th>
             </tr>
         </thead>
 
@@ -170,10 +211,25 @@
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td><strong>214 250 252</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>214 250 252</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt nostrum autem ut non nihil necessitatibus tempore, magnam aperiam amet voluptate eligendi nobis nulla id hic eius et soluta modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptate! Recusandae ab odit ullam nemo itaque nesciunt illo fuga repellat laudantium laboriosam necessitatibus atque deleniti omnis eveniet, cum quas molestias! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, expedita quasi reiciendis repudiandae sapiente omnis. Nostrum quo officiis illum nam maiores, eius soluta facilis maxime corporis perferendis alias placeat est? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, provident perspiciatis libero voluptatibus sapiente voluptatum obcaecati error, esse doloribus amet, dolorem cum natus mollitia praesentium enim earum? Inventore, voluptates corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit! Quae doloremque nisi reprehenderit vero quo quibusdam debitis. Beatae eaque laboriosam, officiis sequi dolores itaque aperiam possimus ipsa asperiores sapiente.
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt nostrum autem ut non nihil necessitatibus tempore, magnam aperiam amet voluptate eligendi nobis nulla id hic eius et soluta modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptate! Recusandae ab odit ullam nemo itaque nesciunt illo fuga repellat laudantium laboriosam necessitatibus atque deleniti omnis eveniet, cum quas molestias! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, expedita quasi reiciendis repudiandae sapiente omnis. Nostrum quo officiis illum nam maiores, eius soluta facilis maxime corporis perferendis alias placeat est? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, provident perspiciatis libero voluptatibus sapiente voluptatum obcaecati error, esse doloribus amet, dolorem cum natus mollitia praesentium enim earum? Inventore, voluptates corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit! Quae doloremque nisi reprehenderit vero quo quibusdam debitis. Beatae eaque laboriosam, officiis sequi dolores itaque aperiam possimus ipsa asperiores sapiente.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt nostrum autem ut non nihil necessitatibus tempore, magnam aperiam amet voluptate eligendi nobis nulla id hic eius et soluta modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptate! Recusandae ab odit ullam nemo itaque nesciunt illo fuga repellat laudantium laboriosam necessitatibus atque deleniti omnis eveniet, cum quas molestias! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, expedita quasi reiciendis repudiandae sapiente omnis. Nostrum quo officiis illum nam maiores, eius soluta facilis maxime corporis perferendis alias placeat est? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, provident perspiciatis libero voluptatibus sapiente voluptatum obcaecati error, esse doloribus amet, dolorem cum natus mollitia praesentium enim earum? Inventore, voluptates corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit! Quae doloremque nisi reprehenderit vero quo quibusdam debitis. Beatae eaque laboriosam, officiis sequi dolores itaque aperiam possimus ipsa asperiores sapiente.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nesciunt nostrum autem ut non nihil necessitatibus tempore, magnam aperiam amet voluptate eligendi nobis nulla id hic eius et soluta modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, voluptate! Recusandae ab odit ullam nemo itaque nesciunt illo fuga repellat laudantium laboriosam necessitatibus atque deleniti omnis eveniet, cum quas molestias! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, expedita quasi reiciendis repudiandae sapiente omnis. Nostrum quo officiis illum nam maiores, eius soluta facilis maxime corporis perferendis alias placeat est? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, provident perspiciatis libero voluptatibus sapiente voluptatum obcaecati error, esse doloribus amet, dolorem cum natus mollitia praesentium enim earum? Inventore, voluptates corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, odit! Quae doloremque nisi reprehenderit vero quo quibusdam debitis. Beatae eaque laboriosam, officiis sequi dolores itaque aperiam possimus ipsa asperiores sapiente.
+        </p>
+    </p>
 </body>
 </html>
