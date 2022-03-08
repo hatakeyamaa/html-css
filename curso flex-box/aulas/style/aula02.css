@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.container {
+    height: 500px;
+    background-color: rgb(180, 180, 180);
+    display: flex;
+    
+    /*
+    flex-direction: row;
+        /* row-reverse | column | column-reverse
+
+    flex-wrap: nowrap;
+        /* wrap | wrap-reverse
+    */
+
+    flex-flow: row nowrap;
+        /* simplificação de flex-direction e flex-wrap */ 
+    
+    justify-content: flex-start;
+    /* flex-end | space-around |space-between */
+
+    align-items: stretch;
+    /* flex-start | flex-end | center | baseline */
+
+}
+
+.item {
+    background-color: rgb(68, 64, 64);
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    height: 30px;
+
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    */
+
+    flex: 1 1 300px;
+    /* forma resumida do conjunto flex-grow | flex-shrink | flex-basis */
+}
+
+.article-01 { flex-shrink: 3; }
+.article-02 {}
+.article-03 {}
+.article-04 {}
