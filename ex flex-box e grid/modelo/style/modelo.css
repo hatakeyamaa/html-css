@@ -17,7 +17,6 @@ header {
     padding: 20px;
 }
 
-
 .menu {
     display: flex;
 }
@@ -48,10 +47,18 @@ img {
     display: block;
 }
 
-.flex {
+.section {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
     margin: auto;
 }
 
+.not {
+    flex: 1 1 200px;
+    padding: 5px;
+}
+
+.bermuda {
+    
+}
